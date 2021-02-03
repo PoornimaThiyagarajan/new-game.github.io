@@ -8,13 +8,13 @@ function moveLeft(){
 }
 
 function moveRight(){
-    var left = parseInt(window.getComputedStyle(character).getPropertyValue("right"));
+    var left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     left += 100;
     if(left<300){
-    character.style.right = left + "px";
+    character.style.left = left + "px";
 }
 }
-document.addEventListener("keydown", Event => {
+document.addEventListener("keydown", event => {
     if(Event.key === "ArrowLeft"){moveLeft();}
     if(Event.key === "ArrowRight"){moveRight();}
 });
